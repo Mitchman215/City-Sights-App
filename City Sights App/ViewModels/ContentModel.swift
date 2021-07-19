@@ -12,6 +12,9 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     
+    @Published var restaurants = [Business]()
+    @Published var sights = [Business]()
+    
     override init() {
         // Init method of NSObject
         super.init()
@@ -50,7 +53,9 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
             
             // TODO: if we have the coordinates of the user, send into Yelp API
-            getBusinesses(category: "restaurants", location: userLocation!)
+            getBusinesses(category: Constants.restaurantKey, location: userLocation!)
+            getBusinesses(category: Constants.sightsKey, location: userLocation!)
+            
         }
         
     }
@@ -64,7 +69,7 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
          let urlString = "https://api.yelp.com/v3/businesses/search?latitude=\(location.coordinate.latitude)&longitude=\(location.coordinate.longitude)&categories=\(category)&limit=6"
          let url = URL(string: urlString)
          */
-        var urlComponents = URLComponents(string: "https://api.yelp.com/v3/businesses/search")
+        var urlComponents = URLComponents(string: Constants.apiUrl)
         urlComponents?.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
@@ -80,7 +85,7 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             // GET is for requesting data
             request.httpMethod = "GET"
             // Sets the authorization key as an http header
-            request.addValue("Bearer \(Secret.YELP_API_KEY)", forHTTPHeaderField: "Authorization")
+            request.addValue("Bearer \(Constants.apiKey)", forHTTPHeaderField: "Authorization")
             
             // Get URLSession
             let session = URLSession.shared
@@ -90,7 +95,29 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                 
                 // Check that there isn't an error
                 if error == nil {
-                    print(response)
+                    do {
+                        // Parse the json
+                        let decoder = JSONDecoder()
+                        let result = try decoder.decode(BusinessSearch.self, from: data!)
+                        
+                        DispatchQueue.main.async {
+                            // Assign results to appropriate property
+                            switch category {
+                            case Constants.restaurantKey:
+                                self.restaurants = result.businesses
+                            case Constants.sightsKey:
+                                self.sights = result.businesses
+                            default:
+                                break
+                            }
+                        }
+                        
+                    }
+                    catch {
+                        print(error)
+                    }
+                    
+                    
                 }
                 
             }
