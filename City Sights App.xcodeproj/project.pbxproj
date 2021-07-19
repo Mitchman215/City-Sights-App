@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22AC13826A5278E00371CAD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22AC13726A5278E00371CAD /* Secret.swift */; };
 		A246897026A34D60006FF9A7 /* CitySightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246896F26A34D60006FF9A7 /* CitySightsApp.swift */; };
 		A246897226A34D60006FF9A7 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246897126A34D60006FF9A7 /* LaunchView.swift */; };
 		A246897426A34D62006FF9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A246897326A34D62006FF9A7 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A22AC13726A5278E00371CAD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		A246896C26A34D60006FF9A7 /* City Sights App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Sights App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A246896F26A34D60006FF9A7 /* CitySightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySightsApp.swift; sourceTree = "<group>"; };
 		A246897126A34D60006FF9A7 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				A246898326A34DB2006FF9A7 /* Views */,
 				A246898226A34DAA006FF9A7 /* ViewModels */,
 				A246897F26A34D69006FF9A7 /* Models */,
+				A22AC13726A5278E00371CAD /* Secret.swift */,
 				A246897326A34D62006FF9A7 /* Assets.xcassets */,
 				A246897826A34D62006FF9A7 /* Info.plist */,
 				A246897526A34D62006FF9A7 /* Preview Content */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A246897226A34D60006FF9A7 /* LaunchView.swift in Sources */,
+				A22AC13826A5278E00371CAD /* Secret.swift in Sources */,
 				A246897026A34D60006FF9A7 /* CitySightsApp.swift in Sources */,
 				A246898726A35634006FF9A7 /* ContentModel.swift in Sources */,
 			);
