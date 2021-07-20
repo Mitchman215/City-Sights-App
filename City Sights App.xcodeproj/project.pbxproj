@@ -21,6 +21,7 @@
 		A287392326A5C9B000772F24 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287392226A5C9B000772F24 /* BusinessList.swift */; };
 		A287392826A5CB7500772F24 /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287392726A5CB7500772F24 /* BusinessSectionHeader.swift */; };
 		A287392B26A5CC5700772F24 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287392A26A5CC5700772F24 /* BusinessSection.swift */; };
+		A291692B26A776600031FA99 /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A291692A26A776600031FA99 /* BusinessDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A287392226A5C9B000772F24 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		A287392726A5CB7500772F24 /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
 		A287392A26A5CC5700772F24 /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
+		A291692A26A776600031FA99 /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +160,9 @@
 			children = (
 				A287392226A5C9B000772F24 /* BusinessList.swift */,
 				A287392A26A5CC5700772F24 /* BusinessSection.swift */,
-				A287392726A5CB7500772F24 /* BusinessSectionHeader.swift */,
 				A216EB4826A668E5001574C0 /* BusinessRow.swift */,
+				A287392726A5CB7500772F24 /* BusinessSectionHeader.swift */,
+				A291692926A776530031FA99 /* Detail */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -169,6 +172,14 @@
 			children = (
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		A291692926A776530031FA99 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A291692A26A776600031FA99 /* BusinessDetail.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A291692B26A776600031FA99 /* BusinessDetail.swift in Sources */,
 				A287392B26A5CC5700772F24 /* BusinessSection.swift in Sources */,
 				A246897226A34D60006FF9A7 /* LaunchView.swift in Sources */,
 				A22AC13826A5278E00371CAD /* Secret.swift in Sources */,

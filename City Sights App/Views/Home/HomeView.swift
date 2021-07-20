@@ -14,27 +14,33 @@ struct HomeView: View {
     
     var body: some View {
         if model.restaurants.count != 0 || model.sights.count != 0 {
-            // Determine if we should show list or map
-            if !isMapShowing {
-                // Show list
-                VStack (alignment: .leading) {
-                    HStack {
-                        Image(systemName: "location")
-                        // TODO: determine location based off coords
-                        Text("San Franciscco")
-                        Spacer()
-                        // TODO: convert to button once map view is made
-                        Text("Switch to map view")
+            NavigationView {
+                // Determine if we should show list or map
+                if !isMapShowing {
+                    // Show list
+                    VStack (alignment: .leading) {
+                        HStack {
+                            Image(systemName: "location")
+                            // TODO: determine location based off coords
+                            Text("San Franciscco")
+                            Spacer()
+                            // TODO: convert to button once map view is made
+                            Text("Switch to map view")
+                        }
+                        
+                        Divider()
+                        
+                        BusinessList()
                     }
-                    
-                    Divider()
-                    
-                    BusinessList()
+                    .padding([.horizontal, .top])
+                    .navigationBarHidden(true)
                 }
-                .padding([.horizontal, .top])
-            }
-            else {
-                // TODO: Show map
+                else {
+                    // TODO: Show map
+                    
+                    // don't forget this
+                    // .navigationBarHidden(true)
+                }
             }
         }
         else {
