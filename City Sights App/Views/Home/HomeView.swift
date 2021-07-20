@@ -24,8 +24,10 @@ struct HomeView: View {
                             // TODO: determine location based off coords
                             Text("San Franciscco")
                             Spacer()
-                            // TODO: convert to button once map view is made
-                            Text("Switch to map view")
+                            // Switch to map view button
+                            Button("Switch to map view") {
+                                self.isMapShowing = true
+                            }
                         }
                         
                         Divider()
@@ -36,7 +38,9 @@ struct HomeView: View {
                     .navigationBarHidden(true)
                 }
                 else {
-                    // TODO: Show map
+                    // Show map
+                    BusinessMap()
+                        .ignoresSafeArea()
                     
                     // don't forget this
                     // .navigationBarHidden(true)

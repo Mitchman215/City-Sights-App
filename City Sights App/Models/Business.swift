@@ -20,7 +20,7 @@ class Business: Decodable, Identifiable, ObservableObject {
     var reviewCount: Int?
     var categories: [Category]?
     var rating: Double?
-    var coordinates: Coordinate
+    var coordinates: Coordinate?
     var transactions: [String]?
     var price: String?
     var location: Location?
