@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Constants {
+enum Constants {
     
     static var apiKey = Secret.YELP_API_KEY
     static var apiUrl = "https://api.yelp.com/v3/businesses/search"
