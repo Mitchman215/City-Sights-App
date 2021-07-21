@@ -20,16 +20,7 @@ struct HomeView: View {
                 if !isMapShowing {
                     // Show list
                     VStack (alignment: .leading) {
-                        HStack {
-                            Image(systemName: "location")
-                            // TODO: determine location based off coords
-                            Text("San Franciscco")
-                            Spacer()
-                            // Switch to map view button
-                            Button("Switch to map view") {
-                                self.isMapShowing = true
-                            }
-                        }
+                        TopDisplayBar(isMapShowing: $isMapShowing)
                         
                         Divider()
                         
@@ -39,16 +30,20 @@ struct HomeView: View {
                     .navigationBarHidden(true)
                 }
                 else {
-                    // Show map
-                    BusinessMap(selectedBusiness: $selectedBusiness)
-                        .ignoresSafeArea()
-                        .sheet(item: $selectedBusiness) { business in
-                            // Create a business detail view instance, pass in selected business
-                            BusinessDetail(business: business)
-                        }
                     
-                    // don't forget this
-                    // .navigationBarHidden(true)
+                    ZStack ( alignment: .top) {
+                        // Show map
+                        BusinessMap(selectedBusiness: $selectedBusiness)
+                            .ignoresSafeArea()
+                            .sheet(item: $selectedBusiness) { business in
+                                // Create a business detail view instance, pass in selected business
+                                BusinessDetail(business: business)
+                            }
+                        
+                        // Top Display bar
+                        TopDisplayBar(isMapShowing: $isMapShowing)
+                            .padding()
+                    }
                 }
             }
         }
