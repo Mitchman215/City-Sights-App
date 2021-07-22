@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopDisplayBar: View {
     
+    @EnvironmentObject var model: ContentModel
     @Binding var isMapShowing: Bool
     
     var body: some View {
@@ -21,8 +22,8 @@ struct TopDisplayBar: View {
             
             HStack {
                 Image(systemName: "location")
-                // TODO: determine location based off coords
-                Text("San Franciscco")
+                // Display city based off coords
+                Text(model.placemark?.locality ?? "")
                 Spacer()
                 // Switch to map view button
                 Button("Switch to \(isMapShowing ? "list" : "map") view") {

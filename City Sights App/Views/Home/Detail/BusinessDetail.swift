@@ -39,14 +39,17 @@ struct BusinessDetail: View {
                         .padding(.leading)
                 }
             }
+            
+            // Business title and yelp attribution
             HStack {
                 BusinessTitle(business: business)
-                    .padding(.horizontal)
+                    .padding([.horizontal, .bottom])
                 Spacer()
                 YelpAttribution(link: business.url ?? "")
             }
             
-            Divider()
+            DashedDivider()
+                .padding(.horizontal)
             
             // Phone
             HStack {
@@ -58,7 +61,8 @@ struct BusinessDetail: View {
             }
             .padding()
             
-            Divider()
+            DashedDivider()
+                .padding(.horizontal)
             
             // Reviews
             HStack {
@@ -70,7 +74,8 @@ struct BusinessDetail: View {
             }
             .padding()
             
-            Divider()
+            DashedDivider()
+                .padding(.horizontal)
             
             // get directions button
             Button {

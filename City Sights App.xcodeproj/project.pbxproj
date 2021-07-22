@@ -27,6 +27,7 @@
 		A298FA7A26A90CB300C3A48A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298FA7926A90CB300C3A48A /* OnboardingView.swift */; };
 		A298FA7D26A9139C00C3A48A /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298FA7C26A9139C00C3A48A /* LocationDeniedView.swift */; };
 		A298FA8126A9179A00C3A48A /* YelpAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298FA8026A9179A00C3A48A /* YelpAttribution.swift */; };
+		A298FA8526A92CC100C3A48A /* DashedDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298FA8426A92CC100C3A48A /* DashedDivider.swift */; };
 		A2F966CE26A85F7F006C3D9C /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F966CD26A85F7F006C3D9C /* DirectionsView.swift */; };
 		A2F966D126A85FF4006C3D9C /* BusinessTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F966D026A85FF4006C3D9C /* BusinessTitle.swift */; };
 		A2F966D826A865AE006C3D9C /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F966D726A865AE006C3D9C /* DirectionsMap.swift */; };
@@ -55,6 +56,7 @@
 		A298FA7926A90CB300C3A48A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A298FA7C26A9139C00C3A48A /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
 		A298FA8026A9179A00C3A48A /* YelpAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAttribution.swift; sourceTree = "<group>"; };
+		A298FA8426A92CC100C3A48A /* DashedDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedDivider.swift; sourceTree = "<group>"; };
 		A2F966CD26A85F7F006C3D9C /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
 		A2F966D026A85FF4006C3D9C /* BusinessTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTitle.swift; sourceTree = "<group>"; };
 		A2F966D726A865AE006C3D9C /* DirectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMap.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				A298FA8026A9179A00C3A48A /* YelpAttribution.swift */,
+				A298FA8426A92CC100C3A48A /* DashedDivider.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A287391026A5BE7600772F24 /* Business.swift in Sources */,
 				A2F966D826A865AE006C3D9C /* DirectionsMap.swift in Sources */,
 				A298FA7A26A90CB300C3A48A /* OnboardingView.swift in Sources */,
+				A298FA8526A92CC100C3A48A /* DashedDivider.swift in Sources */,
 				A287391726A5C23200772F24 /* Constants.swift in Sources */,
 				A287392326A5C9B000772F24 /* BusinessList.swift in Sources */,
 				A216EB4926A668E5001574C0 /* BusinessRow.swift in Sources */,
