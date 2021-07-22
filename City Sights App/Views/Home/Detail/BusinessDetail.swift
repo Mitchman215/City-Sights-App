@@ -39,9 +39,12 @@ struct BusinessDetail: View {
                         .padding(.leading)
                 }
             }
-            
-            BusinessTitle(business: business)
-                .padding(.horizontal)
+            HStack {
+                BusinessTitle(business: business)
+                    .padding(.horizontal)
+                Spacer()
+                YelpAttribution(link: business.url ?? "")
+            }
             
             Divider()
             

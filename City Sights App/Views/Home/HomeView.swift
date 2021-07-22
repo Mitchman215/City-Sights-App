@@ -23,8 +23,16 @@ struct HomeView: View {
                         TopDisplayBar(isMapShowing: $isMapShowing)
                         
                         Divider()
+                        ZStack (alignment: .top) {
+                            BusinessList()
+                            
+                            HStack {
+                                Spacer()
+                                YelpAttribution(link: "https://www.yelp.com/")
+                            }
+                            .padding(.trailing, -20)
+                        }
                         
-                        BusinessList()
                     }
                     .padding([.horizontal, .top])
                     .navigationBarHidden(true)

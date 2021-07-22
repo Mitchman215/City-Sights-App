@@ -16,7 +16,7 @@ struct BusinessTitle: View {
             Group {
                 // Name of business
                 Text(business.name!)
-                    .font(.title)
+                    .font(.title2) 
                     .bold()
                     .padding(.vertical, 5)
                 
